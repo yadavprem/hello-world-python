@@ -1,7 +1,7 @@
-FROM python:3-alpine
-WORKDIR /service
-COPY requirements.txt .
+FROM python:3.8-slim-buster
+WORKDIR /app
+ADD requirements.txt .
 RUN pip install -r requirements.txt
-COPY . ./
-EXPOSE 8080
+ADD ./app.py app.py
+EXPOSE 9090
 ENTRYPOINT ["python3", "app.py"]
