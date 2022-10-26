@@ -14,7 +14,7 @@ def elapsed():
 
 @app.route('/')
 def root():
-    return "Hello World Test1 - ecs cmd task defination  (Python)! (up %s)\n" % elapsed()
+    return "Hello World testing ECS deploymnet (Python)! (up %s)\n" % elapsed()
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=9090)
